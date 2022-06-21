@@ -31,20 +31,20 @@ struct SunView: View {
                     .delay(2.5),
                     value: sunIsUp
                 )
-            InnerRaysView()
+            InnerRaysView(sunIsUp: $sunIsUp, angle: 360)
                 .frame(width: size / 3.4, height: size / 3.4)
                 .scaleEffect(sunIsUp ? 1 : 0)
                 .animation(
                     .easeInOut(duration: 0.25)
-                    .delay(sunIsUp ? 2.25 : 0.5),
+                    .delay(sunIsUp ? 2 : 0.75),
                     value: sunIsUp
                 )
-            InnerRaysView()
+            InnerRaysView(sunIsUp: $sunIsUp, angle: -360)
                 .frame(width: size / 3, height: size / 3)
                 .scaleEffect(sunIsUp ? 1 : 0)
                 .animation(
                     .easeInOut(duration: 0.25)
-                    .delay(sunIsUp ? 2 : 0.75),
+                    .delay(sunIsUp ? 2.25 : 0.5),
                     value: sunIsUp
                 )
             ZStack {

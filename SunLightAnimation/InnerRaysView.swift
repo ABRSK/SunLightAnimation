@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct InnerRaysView: View {
+    @Binding var sunIsUp: Bool
+    let angle: Double
+    
     var body: some View {
         ZStack {
             ForEach(0..<9) { iteration in
@@ -15,12 +18,18 @@ struct InnerRaysView: View {
                     .rotationEffect(.degrees(Double(10 * iteration)))
             }
         }
+        .rotationEffect(.degrees(sunIsUp ? angle : 0))
+        .animation(
+            .linear(duration: 10)
+            .repeatForever(autoreverses: false),
+            value: sunIsUp
+        )
     }
 }
 
 struct InnerRaysView_Previews: PreviewProvider {
     static var previews: some View {
-        InnerRaysView()
+        InnerRaysView(sunIsUp: .constant(true), angle: 360)
             .frame(width: 200, height: 200)
     }
 }

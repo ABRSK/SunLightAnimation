@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var sunIsUp = false
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
+    }
+    
+    private func toggleAnimation() {
+        withAnimation {
+            sunIsUp.toggle()
+        }
     }
 }
 

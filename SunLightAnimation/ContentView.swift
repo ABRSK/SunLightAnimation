@@ -14,8 +14,13 @@ struct ContentView: View {
         ZStack {
             LinearGradient(
                 colors: [.indigo, .blue],
-                startPoint: UnitPoint(x: 0.5, y: 0.25),
+                startPoint: UnitPoint(x: 0.5, y: sunIsUp ? 0.25 : 0.9999),
                 endPoint: UnitPoint(x: 0.5, y: 1)
+            )
+            .animation(
+                .easeInOut(duration: 2)
+                .delay(sunIsUp ? 0 : 0.5),
+                value: sunIsUp
             )
             .ignoresSafeArea()
             VStack {

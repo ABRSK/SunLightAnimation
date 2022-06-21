@@ -13,16 +13,6 @@ struct SunView: View {
     
     var body: some View {
         ZStack {
-//            SunDiscView()
-//                .frame(width: size / 3, height: size / 3)
-//                .blur(radius: 35)
-//                .scaleEffect(sunIsUp ? 1 : 0)
-//                .animation(
-//                    .easeInOut(duration: 1)
-//                    .delay(2.25)
-//                    .repeatForever(autoreverses: true),
-//                    value: sunIsUp
-//                )
             OuterRaysView(sunIsUp: $sunIsUp)
                 .frame(width: size, height: size)
                 .scaleEffect(sunIsUp ? 1 : 0)

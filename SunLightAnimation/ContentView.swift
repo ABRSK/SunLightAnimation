@@ -24,6 +24,7 @@ struct ContentView: View {
             )
             .ignoresSafeArea()
             VStack {
+                Spacer()
                 SunView(sunIsUp: $sunIsUp)
                 Spacer()
                 Button(action: toggleAnimation) {

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OuterRayView: View {
+    @Binding var sunIsUp: Bool
+    
     var body: some View {
         GeometryReader { geometry in
             let size = min(geometry.size.width, geometry.size.height)
@@ -26,12 +28,19 @@ struct OuterRayView: View {
                 path.addLine(to: CGPoint(x: middle, y: size))
             }
             .stroke(.yellow, lineWidth: 3)
+            .scaleEffect(sunIsUp ? 1 : 0.75)
+            .animation(
+                .easeInOut(duration: 1)
+                .delay(Double.random(in: 0.1...0.25))
+                .repeatForever(autoreverses: true),
+                value: sunIsUp
+            )
         }
     }
 }
 
 struct OuterRayView_Previews: PreviewProvider {
     static var previews: some View {
-        OuterRayView()
+        OuterRayView(sunIsUp: .constant(true))
     }
 }

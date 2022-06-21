@@ -23,7 +23,7 @@ struct SunView: View {
                     .repeatForever(autoreverses: true),
                     value: sunIsUp
                 )
-            OuterRaysView()
+            OuterRaysView(sunIsUp: $sunIsUp)
                 .frame(width: size, height: size)
                 .scaleEffect(sunIsUp ? 1 : 0)
                 .animation(

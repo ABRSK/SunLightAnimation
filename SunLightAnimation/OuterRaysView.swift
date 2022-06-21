@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct OuterRaysView: View {
+    @Binding var sunIsUp: Bool
+    
     var body: some View {
         ZStack {
             ForEach(0..<18) { iteration in
-                OuterRayView()
+                OuterRayView(sunIsUp: $sunIsUp)
                     .rotationEffect(.degrees(Double(5 * iteration)))
             }
-            
         }
+        .rotationEffect(.degrees(sunIsUp ? 360 : 0))
+        .animation(.linear(duration: 10).repeatForever(autoreverses: false), value: sunIsUp)
     }
 }
 
 struct OuterRaysView_Previews: PreviewProvider {
     static var previews: some View {
-        OuterRaysView()
+        OuterRaysView(sunIsUp: .constant(true))
             .frame(width: 200, height: 200)
     }
 }

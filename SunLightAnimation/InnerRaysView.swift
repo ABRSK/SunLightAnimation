@@ -21,8 +21,8 @@ struct InnerRaysView: View {
         .rotationEffect(.degrees(sunIsUp ? angle : 0))
         .animation(
             sunIsUp
-            ? .linear(duration: 10).repeatForever(autoreverses: false)
-            : .linear(duration: 10),
+            ? .linear(duration: 30).repeatForever(autoreverses: false)
+            : .linear(duration: 2),
             value: sunIsUp
         )
     }

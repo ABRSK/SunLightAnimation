@@ -29,7 +29,7 @@ struct OuterRayView: View {
                 path.addLine(to: CGPoint(x: middle, y: size - difference))
             }
             .stroke(.yellow, lineWidth: 3)
-            .scaleEffect(sunIsUp ? 1 : 0.8)
+            .scaleEffect(sunIsUp ? 1 : Double.random(in: 0.75...0.9))
             .animation(
                 sunIsUp
                 ? .easeInOut(duration: 1)

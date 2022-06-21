@@ -39,8 +39,8 @@ struct SunView: View {
                 )
             ZStack {
                 SunDiscView()
-                    .frame(width: size / 3, height: size / 3)
-                    .blur(radius: 35)
+                    .frame(width: size / 2, height: size / 2)
+                    .blur(radius: 45)
                 SunDiscView()
                     .frame(width: size / 4, height: size / 4)
             }

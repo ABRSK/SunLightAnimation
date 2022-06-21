@@ -29,7 +29,7 @@ struct InnerRayView: View {
                     clockwise: true
                 )
             }
-            .stroke(.yellow)
+            .stroke(.orange)
             
             Path { path in
                 path.move(to: CGPoint(x: middle, y: 0))

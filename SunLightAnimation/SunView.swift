@@ -13,17 +13,40 @@ struct SunView: View {
     
     var body: some View {
         ZStack {
-            OuterRaysView()
-                .frame(width: size, height: size)
             SunDiscView()
                 .frame(width: size / 3, height: size / 3)
                 .blur(radius: 35)
-                .scaleEffect(sunIsUp ? 1 : 0.5)
-                .animation(.easeInOut.repeatForever(autoreverses: true), value: sunIsUp)
+                .scaleEffect(sunIsUp ? 1 : 0)
+                .animation(
+                    .easeInOut(duration: 1)
+                    .delay(2.25)
+                    .repeatForever(autoreverses: true),
+                    value: sunIsUp
+                )
+            OuterRaysView()
+                .frame(width: size, height: size)
+                .scaleEffect(sunIsUp ? 1 : 0)
+                .animation(
+                    .easeInOut(duration: 0.5)
+                    .delay(2.5),
+                    value: sunIsUp
+                )
             InnerRaysView()
                 .frame(width: size / 3.4, height: size / 3.4)
+                .scaleEffect(sunIsUp ? 1 : 0)
+                .animation(
+                    .easeInOut(duration: 0.25)
+                    .delay(sunIsUp ? 2.25 : 0.5),
+                    value: sunIsUp
+                )
             InnerRaysView()
                 .frame(width: size / 3, height: size / 3)
+                .scaleEffect(sunIsUp ? 1 : 0)
+                .animation(
+                    .easeInOut(duration: 0.25)
+                    .delay(sunIsUp ? 2 : 0.75),
+                    value: sunIsUp
+                )
             ZStack {
                 SunDiscView()
                     .frame(width: size / 3, height: size / 3)
@@ -31,6 +54,12 @@ struct SunView: View {
                 SunDiscView()
                     .frame(width: size / 4, height: size / 4)
             }
+            .offset(x: 0, y: sunIsUp ? 0 : UIScreen.main.bounds.height)
+            .animation(
+                .easeInOut(duration: 2)
+                .delay(sunIsUp ? 0 : 1),
+                value: sunIsUp
+            )
         }
     }
 }

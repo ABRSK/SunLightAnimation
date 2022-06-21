@@ -18,7 +18,7 @@ struct SunDiscView: View {
                 path.addArc(center: CGPoint(x: middle, y: middle), radius: middle, startAngle: .degrees(180), endAngle: .degrees(0), clockwise: true)
             }
             .fill(
-                RadialGradient(colors: [.orange, .yellow], center: UnitPoint(x: 0.5, y: 0.5), startRadius: 0, endRadius: size * 0.67)
+                RadialGradient(colors: [.yellow, .orange], center: UnitPoint(x: 0.5, y: 0.5), startRadius: 0, endRadius: size)
             )
         }
     }

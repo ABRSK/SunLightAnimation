@@ -16,19 +16,20 @@ struct OuterRayView: View {
             let middle = size / 2
             let oneThird = size / 3
             let twoThirds = oneThird * 2
+            let difference = oneThird * 0.18
             
             Path { path in
-                path.move(to: CGPoint(x: oneThird, y: middle))
-                path.addLine(to: CGPoint(x: 0, y: middle))
-                path.move(to: CGPoint(x: twoThirds, y: middle))
-                path.addLine(to: CGPoint(x: size, y: middle))
-                path.move(to: CGPoint(x: middle, y: oneThird))
-                path.addLine(to: CGPoint(x: middle, y: 0))
-                path.move(to: CGPoint(x: middle, y: twoThirds))
-                path.addLine(to: CGPoint(x: middle, y: size))
+                path.move(to: CGPoint(x: oneThird - difference, y: middle))
+                path.addLine(to: CGPoint(x: difference, y: middle))
+                path.move(to: CGPoint(x: twoThirds + difference, y: middle))
+                path.addLine(to: CGPoint(x: size - difference, y: middle))
+                path.move(to: CGPoint(x: middle, y: oneThird - difference))
+                path.addLine(to: CGPoint(x: middle, y: difference))
+                path.move(to: CGPoint(x: middle, y: twoThirds + difference))
+                path.addLine(to: CGPoint(x: middle, y: size - difference))
             }
             .stroke(.yellow, lineWidth: 3)
-            .scaleEffect(sunIsUp ? 1 : 0.75)
+            .scaleEffect(sunIsUp ? 1 : 0.8)
             .animation(
                 .easeInOut(duration: 1)
                 .delay(Double.random(in: 0.1...0.25))

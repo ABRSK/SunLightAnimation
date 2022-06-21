@@ -18,6 +18,10 @@ struct SunView: View {
                 .blur(radius: 35)
                 .scaleEffect(sunIsUp ? 1 : 0.5)
                 .animation(.easeInOut.repeatForever(autoreverses: true), value: sunIsUp)
+            InnerRaysView()
+                .frame(width: size / 3.4, height: size / 3.4)
+            InnerRaysView()
+                .frame(width: size / 3, height: size / 3)
             ZStack {
                 SunDiscView()
                     .frame(width: size / 3, height: size / 3)
@@ -34,3 +38,4 @@ struct SunView_Previews: PreviewProvider {
         SunView(sunIsUp: .constant(false))
     }
 }
+ 

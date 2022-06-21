@@ -13,30 +13,22 @@ struct SunView: View {
     
     var body: some View {
         ZStack {
-            SunDiscView()
-                .frame(width: size / 3, height: size / 3)
-                .blur(radius: 35)
-                .scaleEffect(sunIsUp ? 1 : 0)
-                .animation(
-                    .easeInOut(duration: 1)
-                    .delay(2.25)
-                    .repeatForever(autoreverses: true),
-                    value: sunIsUp
-                )
+//            SunDiscView()
+//                .frame(width: size / 3, height: size / 3)
+//                .blur(radius: 35)
+//                .scaleEffect(sunIsUp ? 1 : 0)
+//                .animation(
+//                    .easeInOut(duration: 1)
+//                    .delay(2.25)
+//                    .repeatForever(autoreverses: true),
+//                    value: sunIsUp
+//                )
             OuterRaysView(sunIsUp: $sunIsUp)
                 .frame(width: size, height: size)
                 .scaleEffect(sunIsUp ? 1 : 0)
                 .animation(
                     .easeInOut(duration: 0.5)
-                    .delay(2.5),
-                    value: sunIsUp
-                )
-            InnerRaysView(sunIsUp: $sunIsUp, angle: 360)
-                .frame(width: size / 3.4, height: size / 3.4)
-                .scaleEffect(sunIsUp ? 1 : 0)
-                .animation(
-                    .easeInOut(duration: 0.25)
-                    .delay(sunIsUp ? 2 : 0.75),
+                    .delay(sunIsUp ? 2.5 : 0),
                     value: sunIsUp
                 )
             InnerRaysView(sunIsUp: $sunIsUp, angle: -360)
@@ -45,6 +37,14 @@ struct SunView: View {
                 .animation(
                     .easeInOut(duration: 0.25)
                     .delay(sunIsUp ? 2.25 : 0.5),
+                    value: sunIsUp
+                )
+            InnerRaysView(sunIsUp: $sunIsUp, angle: 360)
+                .frame(width: size / 3.4, height: size / 3.4)
+                .scaleEffect(sunIsUp ? 1 : 0)
+                .animation(
+                    .easeInOut(duration: 0.25)
+                    .delay(sunIsUp ? 2 : 0.75),
                     value: sunIsUp
                 )
             ZStack {

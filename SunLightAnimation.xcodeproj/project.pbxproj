@@ -13,7 +13,8 @@
 		13AE8B9C2861ADF400E668A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13AE8B9B2861ADF400E668A9 /* Preview Assets.xcassets */; };
 		13AE8BA32861AEF200E668A9 /* SunDiscView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE8BA22861AEF200E668A9 /* SunDiscView.swift */; };
 		13AE8BA52861B0CE00E668A9 /* SunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE8BA42861B0CE00E668A9 /* SunView.swift */; };
-		13AE8BA92861B7D300E668A9 /* RayCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE8BA82861B7D300E668A9 /* RayCircleView.swift */; };
+		13AE8BA92861B7D300E668A9 /* InnerRayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE8BA82861B7D300E668A9 /* InnerRayView.swift */; };
+		13AE8BAD2861B9BC00E668A9 /* InnerRaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE8BAC2861B9BC00E668A9 /* InnerRaysView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +25,8 @@
 		13AE8B9B2861ADF400E668A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		13AE8BA22861AEF200E668A9 /* SunDiscView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunDiscView.swift; sourceTree = "<group>"; };
 		13AE8BA42861B0CE00E668A9 /* SunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunView.swift; sourceTree = "<group>"; };
-		13AE8BA82861B7D300E668A9 /* RayCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RayCircleView.swift; sourceTree = "<group>"; };
+		13AE8BA82861B7D300E668A9 /* InnerRayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerRayView.swift; sourceTree = "<group>"; };
+		13AE8BAC2861B9BC00E668A9 /* InnerRaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerRaysView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +61,10 @@
 			children = (
 				13AE8B942861ADF300E668A9 /* SunLightAnimationApp.swift */,
 				13AE8B962861ADF300E668A9 /* ContentView.swift */,
-				13AE8BA22861AEF200E668A9 /* SunDiscView.swift */,
 				13AE8BA42861B0CE00E668A9 /* SunView.swift */,
-				13AE8BA82861B7D300E668A9 /* RayCircleView.swift */,
+				13AE8BA22861AEF200E668A9 /* SunDiscView.swift */,
+				13AE8BAC2861B9BC00E668A9 /* InnerRaysView.swift */,
+				13AE8BA82861B7D300E668A9 /* InnerRayView.swift */,
 				13AE8B982861ADF400E668A9 /* Assets.xcassets */,
 				13AE8B9A2861ADF400E668A9 /* Preview Content */,
 			);
@@ -146,10 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13AE8BA92861B7D300E668A9 /* RayCircleView.swift in Sources */,
+				13AE8BA92861B7D300E668A9 /* InnerRayView.swift in Sources */,
 				13AE8BA32861AEF200E668A9 /* SunDiscView.swift in Sources */,
 				13AE8BA52861B0CE00E668A9 /* SunView.swift in Sources */,
 				13AE8B972861ADF300E668A9 /* ContentView.swift in Sources */,
+				13AE8BAD2861B9BC00E668A9 /* InnerRaysView.swift in Sources */,
 				13AE8B952861ADF300E668A9 /* SunLightAnimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

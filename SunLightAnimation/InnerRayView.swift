@@ -1,5 +1,5 @@
 //
-//  RayCircleView.swift
+//  InnerRayView.swift
 //  SunLightAnimation
 //
 //  Created by Андрей Барсук on 21.06.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RayCircleView: View {
+struct InnerRayView: View {
     var body: some View {
         GeometryReader { geometry in
             let size = min(geometry.size.width, geometry.size.height)
@@ -42,9 +42,9 @@ struct RayCircleView: View {
     }
 }
 
-struct RayCircleView_Previews: PreviewProvider {
+struct InnerRayView_Previews: PreviewProvider {
     static var previews: some View {
-        RayCircleView()
+        InnerRayView()
             .frame(width: 200, height: 200)
     }
 }

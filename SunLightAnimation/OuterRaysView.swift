@@ -18,7 +18,12 @@ struct OuterRaysView: View {
             }
         }
         .rotationEffect(.degrees(sunIsUp ? 360 : 0))
-        .animation(.linear(duration: 10).repeatForever(autoreverses: false), value: sunIsUp)
+        .animation(
+            sunIsUp
+            ? .linear(duration: 10).repeatForever(autoreverses: false)
+            : .linear(duration: 10),
+            value: sunIsUp
+        )
     }
 }
 

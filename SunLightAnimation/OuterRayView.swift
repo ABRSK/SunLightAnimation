@@ -31,9 +31,11 @@ struct OuterRayView: View {
             .stroke(.yellow, lineWidth: 3)
             .scaleEffect(sunIsUp ? 1 : 0.8)
             .animation(
-                .easeInOut(duration: 1)
+                sunIsUp
+                ? .easeInOut(duration: 1)
                 .delay(Double.random(in: 0.1...0.25))
-                .repeatForever(autoreverses: true),
+                .repeatForever(autoreverses: true)
+                : .easeInOut(duration: 1),
                 value: sunIsUp
             )
         }

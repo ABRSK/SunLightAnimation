@@ -13,6 +13,8 @@ struct SunView: View {
     
     var body: some View {
         ZStack {
+            OuterRaysView()
+                .frame(width: size, height: size)
             SunDiscView()
                 .frame(width: size / 3, height: size / 3)
                 .blur(radius: 35)

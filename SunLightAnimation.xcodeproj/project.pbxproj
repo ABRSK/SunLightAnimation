@@ -15,6 +15,7 @@
 		13AE8BA52861B0CE00E668A9 /* SunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE8BA42861B0CE00E668A9 /* SunView.swift */; };
 		13AE8BA92861B7D300E668A9 /* InnerRayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE8BA82861B7D300E668A9 /* InnerRayView.swift */; };
 		13AE8BAD2861B9BC00E668A9 /* InnerRaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE8BAC2861B9BC00E668A9 /* InnerRaysView.swift */; };
+		13AE8BAF2861BDCE00E668A9 /* OuterRayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AE8BAE2861BDCE00E668A9 /* OuterRayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		13AE8BA42861B0CE00E668A9 /* SunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunView.swift; sourceTree = "<group>"; };
 		13AE8BA82861B7D300E668A9 /* InnerRayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerRayView.swift; sourceTree = "<group>"; };
 		13AE8BAC2861B9BC00E668A9 /* InnerRaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerRaysView.swift; sourceTree = "<group>"; };
+		13AE8BAE2861BDCE00E668A9 /* OuterRayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterRayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				13AE8B942861ADF300E668A9 /* SunLightAnimationApp.swift */,
 				13AE8B962861ADF300E668A9 /* ContentView.swift */,
 				13AE8BA42861B0CE00E668A9 /* SunView.swift */,
+				13AE8BAE2861BDCE00E668A9 /* OuterRayView.swift */,
 				13AE8BA22861AEF200E668A9 /* SunDiscView.swift */,
 				13AE8BAC2861B9BC00E668A9 /* InnerRaysView.swift */,
 				13AE8BA82861B7D300E668A9 /* InnerRayView.swift */,
@@ -153,6 +156,7 @@
 				13AE8BA32861AEF200E668A9 /* SunDiscView.swift in Sources */,
 				13AE8BA52861B0CE00E668A9 /* SunView.swift in Sources */,
 				13AE8B972861ADF300E668A9 /* ContentView.swift in Sources */,
+				13AE8BAF2861BDCE00E668A9 /* OuterRayView.swift in Sources */,
 				13AE8BAD2861B9BC00E668A9 /* InnerRaysView.swift in Sources */,
 				13AE8B952861ADF300E668A9 /* SunLightAnimationApp.swift in Sources */,
 			);
